@@ -14,23 +14,25 @@ public class java2DArrayClass {
               System.out.println(data[row][col]);
            }
         }
-        public void print(){}
-        TwoDimenstionalArray(int row,int col){
-            if(row <= r && col <= c){
-                for(int i=0; i<row; i++){
-                 for(int j=0; i<col; j++){
+        public void print(){
+           
+                for(int i=0; i<r; i++){
+                 for(int j=0; i<c; j++){
                     System.out.println(data[i][j]);
                  }   
                 }
                
-             }
+             
+        }
+        TwoDimenstionalArray(int r,int c){
+            this.c = c;
+            this.r = r;
+            data = new int[r][c];
         }
     }
     public static void main(String[] args) {
         TwoDimenstionalArray test = new TwoDimenstionalArray(3, 3);
         test.set(0, 0, 0);
-        test.get(0, 0);
-        test.print();
        
     }
 
